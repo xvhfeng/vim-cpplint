@@ -13,12 +13,12 @@ it already. Then, simply put the contents of this repository in your
 
 Usage
 -----
+0. install cpplint : `pip install cpplint`,or please find[cpplint](https://github.com/cpplint/cpplint)
 1. Open a C++ file
 2. Press `<F7>` to run `cpplint.py` on it
 
 It shows the errors inside a quickfix window, which will allow your to quickly
 jump to the error locations by simply pressing [Enter].
-
 
 Customization
 -------------
@@ -26,13 +26,13 @@ If you don't want to use the `<F7>` key for cpplint-checking, simply remap it
 to another key. It autodetects whether it has been remapped and won't register
 the `<F7>` key if so. For example, to remap it to `<F3>` instead, use:
 
-    autocmd FileType cpp map <buffer> <F3> :call Cpplint()<CR>
+autocmd FileType cpp map <buffer> <F3> :call Cpplint()<CR>
 
 
 Tips
 ----
 A tip might be to run the cpplint.py check every time you write a C++ file, to
 enable this, add the following line to your `.vimrc` file (thanks
-[Godefroid](http://github.com/gotcha)!):
+        [Godefroid](http://github.com/gotcha)!):
 
-    autocmd BufWritePost *.h,*.cpp call Cpplint()
+autocmd BufWritePost *.h,*.cpp call Cpplint()
